@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Particle from './components/Particle';
+import Home from './views/HomePage';
+import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
 import './App.css';
 
 function App() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleToggle = () => {
+    setOpen(!isOpen);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Particle />
+      <Router>
+        <Sidebar isOpen={isOpen} toggle={handleToggle} />
+        <Navbar toggle={handleToggle} />
+        <Home />
+      </Router>
     </div>
   );
 }
