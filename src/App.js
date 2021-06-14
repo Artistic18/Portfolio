@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Particle from './components/Particle';
 import Home from './views/HomePage';
@@ -10,6 +10,10 @@ import './App.css';
 
 function App() {
   const [isOpen, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = "Hrishit's Portfolio";
+  });
 
   const handleToggle = () => {
     setOpen(!isOpen);
