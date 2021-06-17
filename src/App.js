@@ -6,6 +6,7 @@ import About from './views/AboutPage';
 import Project from './views/ProjectPage';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Particle />
       <Sidebar isOpen={isOpen} toggle={handleToggle} />
       <Navbar toggle={handleToggle} />
+      <Footer />
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/projects" component={Project} />

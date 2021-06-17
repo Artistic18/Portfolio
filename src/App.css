@@ -15,6 +15,26 @@ html {
   display: flex;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f50057;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f50057;
+}
+
 @media screen and (max-width: 1024px) {
   #introShort {
     margin-top: 4.7rem;
@@ -43,5 +63,24 @@ html {
   #contact {
     margin-left: 33.33vw;
     margin-top: 85vh;
+  }
+  #footer {
+    height: 10vh;
+    position: absolute;
+    margin-top: 100vh;
+  }
+  #footer-icons {
+    margin-left: 35vw;
+    margin-top: 1vh;
+    margin-left: 0vw;
+    width: 100vw;
+  }
+  #footer-text {
+    font-size: 2vh;
+    text-align: center;
+    margin-left: 0vw;
+  }
+  #icon {
+    margin-left: 33%;
   }
 }

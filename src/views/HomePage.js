@@ -24,10 +24,33 @@ const imageVariant = {
   },
 };
 
+const containerVariants = {
+  hidden: {
+    opacity: 1,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.5,
+    },
+  },
+  exit: {
+    x: '-100vw',
+    transition: { ease: 'easeInOut' },
+  },
+};
+
 function Home() {
   const classes = useStyles();
   return (
-    <div className="Home">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="Home"
+    >
       <IntroShort />
       <motion.img
         id="devImage"
@@ -40,7 +63,7 @@ function Home() {
       />
       <InfoShort />
       <Contact />
-    </div>
+    </motion.div>
   );
 }
 
