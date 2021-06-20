@@ -18,10 +18,26 @@ const useStyles = makeStyles({
     marginTop: '1vh',
     marginLeft: '-0.5vw',
   },
-  icons: {
+  github: {
     transform: 'scale(2)',
     color: '#fff',
     cursor: 'pointer',
+  },
+  linkedin: {
+    transform: 'scale(2)',
+    color: '#fff',
+    cursor: 'pointer',
+    '&:hover': {
+      color: '#0A66C2',
+    },
+  },
+  twitter: {
+    transform: 'scale(2)',
+    color: '#fff',
+    cursor: 'pointer',
+    '&:hover': {
+      color: '#1A91DA',
+    },
   },
 });
 
@@ -33,17 +49,17 @@ function Contact() {
       <div className={classes.iconContainer}>
         <FaGithub
           onClick={() => window.open('https://github.com/Artistic18')}
-          className={classes.icons}
+          className={classes.github}
         />
         <FaLinkedin
           style={{ marginLeft: '3rem' }}
           onClick={() => window.open('https://www.linkedin.com/in/artistic18/')}
-          className={classes.icons}
+          className={classes.linkedin}
         />
         <FaTwitter
           onClick={() => window.open('https://twitter.com/Hrishit15')}
           style={{ marginLeft: '3rem' }}
-          className={classes.icons}
+          className={classes.twitter}
         />
       </div>
     </div>
