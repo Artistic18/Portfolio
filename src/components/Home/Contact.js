@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   typography: {
     color: '#f50057',
     fontSize: '1.5rem',
+    marginLeft: '-1.2rem',
     fontFamily: 'Kaushan Script',
   },
   iconContainer: {
@@ -28,7 +29,7 @@ function Contact() {
   const classes = useStyles();
   return (
     <div id="contact" className={classes.root}>
-      <Typography className={classes.typography}>Find Me On</Typography>
+      <Typography className={classes.typography}>Connect With Me</Typography>
       <div className={classes.iconContainer}>
         <FaGithub
           onClick={() => window.open('https://github.com/Artistic18')}

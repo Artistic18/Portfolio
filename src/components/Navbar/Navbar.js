@@ -37,7 +37,7 @@ function Navbar({ toggle }) {
                   style={{
                     textDecoration: 'none',
                     background: '#f50057',
-                    borderRadius: '30px',
+                    borderRadius: '10px',
                     padding: '0.5rem',
                     color: '#fff',
                   }}
