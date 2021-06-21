@@ -46,7 +46,11 @@ function App() {
     }
   };
 
-  return <div>{handleLoading()}</div>;
+  return (
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
+      {handleLoading()}
+    </div>
+  );
 }
 
 export default App;

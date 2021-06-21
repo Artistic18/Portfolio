@@ -62,12 +62,14 @@ html {
   }
   #contact {
     margin-left: 33.33vw;
-    margin-top: 85vh;
+    position: absolute;
+    bottom: 13vh;
+    display: none;
   }
   #footer {
     height: 10vh;
     position: absolute;
-    margin-top: 100vh;
+    bottom: 0;
   }
   #footer-icons {
     margin-left: 35vw;
@@ -95,5 +97,25 @@ html {
     height: '70vh';
     display: flex;
     opacity: 0.5;
+  }
+  #about-title {
+    margin-left: 15vw;
+    width: 60vw;
+    margin-top: 10vh;
+  }
+  #about-text {
+    margin-left: 15vw;
+    width: 70vw;
+  }
+  #about-img {
+    margin-left: 0rem;
+    margin-top: 32rem;
+    height: 40vh;
+    width: 40vh;
+  }
+  #aboutimg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

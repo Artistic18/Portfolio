@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import IntroShort from '../components/Home/IntroShort';
 import InfoShort from '../components/Home/InfoShort';
 import Contact from '../components/Home/Contact';
 import DevImage from '../assests/dev.svg';
-import { Button, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import '../App.css';
 
 const useStyles = makeStyles({

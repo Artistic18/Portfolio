@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 function Particle() {
   return (
     <Particles
-      style={{ position: 'absolute' }}
+      style={{ position: 'fixed' }}
       params={{
         particles: {
           color: {

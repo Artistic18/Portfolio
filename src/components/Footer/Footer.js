@@ -4,7 +4,7 @@ import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: '95.85vh',
+    bottom: 0,
     position: 'absolute',
     background: '#f500561e',
     width: '100%',
