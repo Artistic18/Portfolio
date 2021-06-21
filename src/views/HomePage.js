@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     height: '70vh',
     opacity: '0.05',
     marginLeft: '40vw',
-    marginTop: '-35vh',
+    marginTop: '-45vh',
   },
 });
 

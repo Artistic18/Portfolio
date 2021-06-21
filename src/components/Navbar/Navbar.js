@@ -14,7 +14,7 @@ import {
 
 function Navbar({ toggle }) {
   return (
-    <div style={{ position: 'absolute', width: '100%' }}>
+    <div style={{ position: 'sticky', top: 0, zIndex: '1', width: '100%' }}>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">HB</NavLogo>
