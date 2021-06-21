@@ -39,7 +39,7 @@ const imageVariant = {
 
 const containerVariants = {
   hidden: {
-    opacity: 1,
+    opacity: 0,
   },
   visible: {
     opacity: 1,
@@ -57,7 +57,12 @@ const containerVariants = {
 function Home() {
   const classes = useStyles();
   return (
-    <div>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <svg
         className={classes.svgBlob}
         id="svgBlob"
@@ -81,13 +86,7 @@ function Home() {
       >
         <ellipse cx="209.5" cy="198.5" rx="209.5" ry="198.5" fill="#F50057" />
       </svg>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        className="Home"
-      >
+      <div className="Home">
         <IntroShort />
         <motion.img
           id="devImage"
@@ -100,8 +99,8 @@ function Home() {
         />
         <InfoShort />
         <Contact />
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }
 

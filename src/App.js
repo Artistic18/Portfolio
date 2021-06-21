@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoading } from './actions/Loader';
 import Particle from './components/Particle';
@@ -16,6 +18,7 @@ function App() {
   const [isOpen, setOpen] = useState(false);
   const loading = useSelector((state) => state.loader.loading);
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     document.title = "Hrishit's Portfolio";
@@ -31,17 +34,19 @@ function App() {
       return <Loader />;
     } else {
       return (
-        <Router>
+        <>
           <Particle />
           <Sidebar isOpen={isOpen} toggle={handleToggle} />
           <Navbar toggle={handleToggle} />
           <Footer />
-          <Switch>
-            <Route path="/about" component={About} />
-            <Route path="/projects" component={Project} />
-            <Route path="/" component={Home} />
-          </Switch>
-        </Router>
+          <AnimatePresence exitBeforeEnter>
+            <Switch location={location} key={location.key}>
+              <Route path="/about" component={About} />
+              <Route path="/projects" component={Project} />
+              <Route path="/" component={Home} />
+            </Switch>
+          </AnimatePresence>
+        </>
       );
     }
   };
