@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
-  background: transparent;
+  background: ${({ navColor }) =>
+    navColor ? 'rgba(255, 88, 88, 0.15)' : 'transparent'};
+  backdrop-filter: blur(15px);
   height: 70px;
   width: 100%;
   display: flex;

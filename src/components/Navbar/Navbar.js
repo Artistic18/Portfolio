@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import {
@@ -13,9 +13,19 @@ import {
 } from './NavElements';
 
 function Navbar({ toggle }) {
+  const [navColor, setNavColor] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 20) setNavColor(true);
+    else setNavColor(false);
+  };
+  window.addEventListener('scroll', handleScroll);
+
+  console.log(navColor);
+
   return (
     <div style={{ position: 'sticky', top: 0, zIndex: '1', width: '100%' }}>
-      <Nav>
+      <Nav navColor={navColor}>
         <NavbarContainer>
           <NavLogo to="/">HB</NavLogo>
           <MobileIcon onClick={toggle}>
